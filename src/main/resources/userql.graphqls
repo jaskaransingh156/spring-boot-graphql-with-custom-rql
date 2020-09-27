@@ -1,0 +1,17 @@
+type Query {
+	userList(filter: String, range: String, sort: String): [User!]!
+	userCount(filter: String): Int!
+}
+
+type User {
+	id: ID!
+	name: String!
+	userAddressList: [UserAddress!]!
+}
+
+type UserAddress {
+	id: ID!
+	userId: Int!
+	address: String!
+	user: User!
+}
