@@ -13,9 +13,9 @@ import graphql.execution.ExecutionStrategyParameters;
 @Service
 public class AsyncTransactionalExecutionStrategy extends AsyncExecutionStrategy {
 
-	@Override
-	@Transactional
-	public CompletableFuture<ExecutionResult> execute(ExecutionContext executionContext, ExecutionStrategyParameters executionStrategyParameters) {
-		return super.execute(executionContext, executionStrategyParameters);
-	}
+    @Override
+    @Transactional
+    public CompletableFuture<ExecutionResult> execute(ExecutionContext executionContext, ExecutionStrategyParameters executionStrategyParameters) {
+        return super.execute(executionContext, executionStrategyParameters);
+    }
 }

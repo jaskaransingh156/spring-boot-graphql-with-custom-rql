@@ -17,21 +17,21 @@ Just we like we normally define schema and query for graphql, we will define the
 
 ```
 type Query {
-	userList(filter: String, range: String, sort: String): [User!]!
-	userCount(filter: String): Int!
+    userList(filter: String, range: String, sort: String): [User!]!
+    userCount(filter: String): Int!
 }
 
 type User {
-	id: ID!
-	name: String!
-	userAddressList: [UserAddress!]!
+    id: ID!
+    name: String!
+    userAddressList: [UserAddress!]!
 }
 
 type UserAddress {
-	id: ID!
-	userId: Int!
-	address: String!
-	user: User!
+    id: ID!
+    userId: Int!
+    address: String!
+    user: User!
 }
 ```
 
@@ -41,19 +41,19 @@ Now, we will define the functions, corresponding to the GraphQL query, in the fo
 ```java
 @Component
 public class GraphQLQueryService implements GraphQLQueryResolver {
-	@Inject
-	private FilterService<User, Integer> userFilterService;
+    @Inject
+    private FilterService<User, Integer> userFilterService;
 
-	public List<User> getUserList(String filter, String range, String sort) {
-		QueryParamWrapper queryParamWrapper = Utils.extractQueryParams(filter, range, sort);
-		Page<User> pages = userFilterService.filterBy(queryParamWrapper, User.class);
-		return pages.getContent();
-	}
+    public List<User> getUserList(String filter, String range, String sort) {
+        QueryParamWrapper queryParamWrapper = Utils.extractQueryParams(filter, range, sort);
+        Page<User> pages = userFilterService.filterBy(queryParamWrapper, User.class);
+        return pages.getContent();
+    }
 
-	public long getUserCount(String filter) {
-		QueryParamWrapper queryParamWrapper = Utils.extractQueryParams(filter, null, null);
-		return userFilterService.countBy(queryParamWrapper);
-	}
+    public long getUserCount(String filter) {
+        QueryParamWrapper queryParamWrapper = Utils.extractQueryParams(filter, null, null);
+        return userFilterService.countBy(queryParamWrapper);
+    }
 }
 ```
 

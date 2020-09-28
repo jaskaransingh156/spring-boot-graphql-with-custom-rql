@@ -11,8 +11,8 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 @NoArgsConstructor(force = true)
 public class QueryParamWrapper {
-	private final JSONObject filter;
-	private final JSONArray filterOr;
-	private final JSONArray range;
-	private final JSONArray sort;
+    private final JSONObject filter;
+    private final JSONArray filterOr;
+    private final JSONArray range;
+    private final JSONArray sort;
 }

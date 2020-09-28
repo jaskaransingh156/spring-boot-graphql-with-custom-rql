@@ -18,18 +18,18 @@ import lombok.Setter;
 @Setter
 @Table(name = "user_address")
 public class UserAddress {
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(unique = true, nullable = false)
-	private Integer id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(unique = true, nullable = false)
+    private Integer id;
 
-	@Column(name = "user_id", nullable = false)
-	private Integer userId;
+    @Column(name = "user_id", nullable = false)
+    private Integer userId;
 
-	@Column(nullable = false, length = 1024)
-	private String address;
+    @Column(nullable = false, length = 1024)
+    private String address;
 
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "user_id", insertable = false, updatable = false)
-	private User user;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id", insertable = false, updatable = false)
+    private User user;
 }

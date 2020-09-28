@@ -23,16 +23,16 @@ import lombok.Setter;
 @Setter
 @Table(name = "user")
 public class User {
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(unique = true, nullable = false)
-	private Integer id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(unique = true, nullable = false)
+    private Integer id;
 
-	@Column(nullable = false, length = 256)
-	private String name;
+    @Column(nullable = false, length = 256)
+    private String name;
 
-	@Setter(AccessLevel.NONE)
-	@BatchSize(size = 10)
-	@OneToMany(mappedBy = "user", fetch = FetchType.LAZY, cascade = { CascadeType.ALL }, orphanRemoval = true)
-	private Set<UserAddress> userAddressList;
+    @Setter(AccessLevel.NONE)
+    @BatchSize(size = 10)
+    @OneToMany(mappedBy = "user", fetch = FetchType.LAZY, cascade = {CascadeType.ALL}, orphanRemoval = true)
+    private Set<UserAddress> userAddressList;
 }

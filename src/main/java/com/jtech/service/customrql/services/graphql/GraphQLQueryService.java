@@ -15,17 +15,17 @@ import com.jtech.service.customrql.utils.Utils;
 
 @Component
 public class GraphQLQueryService implements GraphQLQueryResolver {
-	@Inject
-	private FilterService<User, Integer> userFilterService;
+    @Inject
+    private FilterService<User, Integer> userFilterService;
 
-	public List<User> getUserList(String filter, String range, String sort) {
-		QueryParamWrapper queryParamWrapper = Utils.extractQueryParams(filter, range, sort);
-		Page<User> pages = userFilterService.filterBy(queryParamWrapper, User.class);
-		return pages.getContent();
-	}
+    public List<User> getUserList(String filter, String range, String sort) {
+        QueryParamWrapper queryParamWrapper = Utils.extractQueryParams(filter, range, sort);
+        Page<User> pages = userFilterService.filterBy(queryParamWrapper, User.class);
+        return pages.getContent();
+    }
 
-	public long getUserCount(String filter) {
-		QueryParamWrapper queryParamWrapper = Utils.extractQueryParams(filter, null, null);
-		return userFilterService.countBy(queryParamWrapper);
-	}
+    public long getUserCount(String filter) {
+        QueryParamWrapper queryParamWrapper = Utils.extractQueryParams(filter, null, null);
+        return userFilterService.countBy(queryParamWrapper);
+    }
 }
