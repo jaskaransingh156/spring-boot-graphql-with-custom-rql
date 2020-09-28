@@ -1,4 +1,4 @@
-package com.jtech.service.rql.utils;
+package com.jtech.service.customrql.utils;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
@@ -14,7 +14,7 @@ import org.json.JSONTokener;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.jtech.service.rql.models.QueryParamWrapper;
+import com.jtech.service.customrql.models.QueryParamWrapper;
 
 public class Utils {
 	private static final Logger logger = LoggerFactory.getLogger(Utils.class);

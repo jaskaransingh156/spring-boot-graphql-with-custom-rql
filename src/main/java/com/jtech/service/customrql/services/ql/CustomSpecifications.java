@@ -1,4 +1,4 @@
-package com.jtech.service.rql.services.ql;
+package com.jtech.service.customrql.services.ql;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -27,7 +27,7 @@ import org.apache.commons.lang3.StringUtils;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 
-import com.jtech.service.rql.utils.CustomQLConstants;
+import com.jtech.service.customrql.utils.CustomQLConstants;
 
 @Service
 public class CustomSpecifications<T> {

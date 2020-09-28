@@ -1,4 +1,4 @@
-package com.jtech.service.rql.configurations;
+package com.jtech.service.customrql.configurations;
 
 import javax.sql.DataSource;
 

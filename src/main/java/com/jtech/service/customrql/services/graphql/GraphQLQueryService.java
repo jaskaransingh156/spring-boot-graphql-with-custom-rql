@@ -1,4 +1,4 @@
-package com.jtech.service.rql.services.graphql;
+package com.jtech.service.customrql.services.graphql;
 
 import java.util.List;
 
@@ -8,10 +8,10 @@ import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Component;
 
 import com.coxautodev.graphql.tools.GraphQLQueryResolver;
-import com.jtech.service.rql.domains.User;
-import com.jtech.service.rql.models.QueryParamWrapper;
-import com.jtech.service.rql.services.ql.FilterService;
-import com.jtech.service.rql.utils.Utils;
+import com.jtech.service.customrql.domains.User;
+import com.jtech.service.customrql.models.QueryParamWrapper;
+import com.jtech.service.customrql.services.ql.FilterService;
+import com.jtech.service.customrql.utils.Utils;
 
 @Component
 public class GraphQLQueryService implements GraphQLQueryResolver {

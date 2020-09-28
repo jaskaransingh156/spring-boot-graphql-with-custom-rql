@@ -1,4 +1,4 @@
-package com.jtech.service.rql.repositories;
+package com.jtech.service.customrql.repositories;
 
 import java.io.Serializable;
 

@@ -1,4 +1,4 @@
-package com.jtech.service.rql;
+package com.jtech.service.customrql;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

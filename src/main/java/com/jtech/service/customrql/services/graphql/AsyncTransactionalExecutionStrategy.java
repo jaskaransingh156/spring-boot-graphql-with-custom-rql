@@ -1,4 +1,4 @@
-package com.jtech.service.rql.services.graphql;
+package com.jtech.service.customrql.services.graphql;
 
 import java.util.concurrent.CompletableFuture;
 

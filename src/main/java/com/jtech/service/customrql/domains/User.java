@@ -1,4 +1,4 @@
-package com.jtech.service.rql.domains;
+package com.jtech.service.customrql.domains;
 
 import java.util.Set;
 

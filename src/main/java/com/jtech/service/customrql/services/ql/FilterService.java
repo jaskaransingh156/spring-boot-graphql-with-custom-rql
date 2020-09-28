@@ -1,4 +1,4 @@
-package com.jtech.service.rql.services.ql;
+package com.jtech.service.customrql.services.ql;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -16,10 +16,10 @@ import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 
-import com.jtech.service.rql.models.QueryParamWrapper;
-import com.jtech.service.rql.repositories.BaseRepository;
-import com.jtech.service.rql.utils.CustomQLConstants;
-import com.jtech.service.rql.utils.Utils;
+import com.jtech.service.customrql.models.QueryParamWrapper;
+import com.jtech.service.customrql.repositories.BaseRepository;
+import com.jtech.service.customrql.utils.CustomQLConstants;
+import com.jtech.service.customrql.utils.Utils;
 
 @Service
 public class FilterService<T, I extends Serializable> {

@@ -1,4 +1,4 @@
-package com.jtech.service.rql.utils;
+package com.jtech.service.customrql.utils;
 
 public class CustomQLConstants {
 

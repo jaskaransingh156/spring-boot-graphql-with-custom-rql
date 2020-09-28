@@ -1,4 +1,4 @@
-package com.jtech.service.rql.models;
+package com.jtech.service.customrql.models;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
