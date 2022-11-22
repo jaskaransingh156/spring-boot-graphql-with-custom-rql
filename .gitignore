@@ -27,3 +27,4 @@ target/
 .settings/
 .idea/
 customrql.iml
+.DS_Store
